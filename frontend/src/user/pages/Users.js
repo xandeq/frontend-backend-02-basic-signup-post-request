@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import UsersList from '../components/UsersList';
 
 const Users = () => {
+  const [isLoading, setIsLoading] = useState(false);
+const [error, setError] = useState();
+const [loadedUsers, setLoadedUsers]
 
   useEffect(() => {
     const sendRequest = () => {
