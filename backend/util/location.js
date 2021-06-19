@@ -5,15 +5,15 @@ const HttpError = require('../models/http-error');
 const API_KEY = 'AIzaSyDGt_aDYTGDKGcHopAlLZWBOJtvHN3HlwY';
 
 async function getCoordsForAddress(address) {
-  // return {
-  //   lat: 40.7484474,
-  //   lng: -73.9871516
-  // };
-  const response = await axios.get(
-    `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
-      address
-    )}&key=${API_KEY}`
-  );
+  return {
+    lat: 40.7484474,
+    lng: -73.9871516
+  };
+  // const response = await axios.get(
+  //   `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
+  //     address
+  //   )}&key=${API_KEY}`
+  // );
 
   const data = response.data;
 
